@@ -15,4 +15,7 @@ jobs:
               run: |
                sudo apt-get update
                sudo apt-get install yamllint 
+            - name: run yamllint
+              run: |
+                yamllint -d "{extends: default, rules: {spaces: 4}}" .   
               
