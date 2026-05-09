@@ -1,0 +1,14 @@
+name: Check yaml structure
+on:
+    push:
+        branches:
+            - "hotfix/**"
+    pull_request:
+        branches:
+            - "main"
+jobs:
+    Checking-yaml-structure:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v6
+              
