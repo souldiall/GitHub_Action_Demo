@@ -10,11 +10,12 @@ jobs:
     Checking-yaml-structure:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
             - name: Install yaml lint
-              run: |
-               sudo apt-get update
-               sudo apt-get install yamllint
-            - name: run yamllint
-              run: |
-                yamllint -d "{extends: default, rule: {spaces: 4}}" .
+              uses: frenck/action-yamllint@v1.5.0
+            #   run: |
+            #    sudo apt-get update
+            #    sudo apt-get install yamllint
+            # - name: run yamllint
+            #   run: |
+            #     yamllint -d "{extends: default, rule: {spaces: 4}}" .
