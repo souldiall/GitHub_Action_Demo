@@ -14,7 +14,7 @@ jobs:
             - name: Install yaml lint
               run: |
                sudo apt-get update
-               sudo apt-get install yamllint 
+               sudo apt-get install yamllint
             - name: run yamllint
               run: |
-                yamllint -d "{extends: default, rule: {spaces: 4}}" . 
+                yamllint -d "{extends: default, rule: {spaces: 4}}" .
